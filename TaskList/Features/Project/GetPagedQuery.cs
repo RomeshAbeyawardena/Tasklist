@@ -15,4 +15,5 @@ public record GetPagedQuery : IProjectQuery, IPagedRequest<Models.Project>
     public bool? NoTracking { get; set; }
     public int? PageIndex { get; set; }
     public int? TotalItemsPerPage { get; set; }
+    public Guid? Id { get; set; }
 }

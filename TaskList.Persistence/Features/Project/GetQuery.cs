@@ -13,4 +13,5 @@ public record GetQuery : IProjectQuery, IOrderByQuery, IRequest<IEnumerable<Mode
     public IEnumerable<string>? OrderByFields { get; set; }
     public SortOrder? SortOrder { get; set; }
     public bool? NoTracking { get; set; }
+    public Guid? Id { get; set; }
 }

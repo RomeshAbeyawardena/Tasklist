@@ -1,6 +1,3 @@
 var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
-
-app.MapGet("/", () => "Hello World!");
-
-app.Run();
+var app = new TaskList.Web.App("", args);
+await app.RunAsync(CancellationToken.None);

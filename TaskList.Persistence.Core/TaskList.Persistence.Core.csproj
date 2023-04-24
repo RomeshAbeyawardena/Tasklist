@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="RST.EntityFrameworkCore.Extensions" Version="1.0.1.19" />
     <PackageReference Include="RST.Mediatr.Extensions" Version="1.0.1.19" />
   </ItemGroup>
 

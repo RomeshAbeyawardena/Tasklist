@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskList.Persistence.Core",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskList.Web", "TaskList.Web\TaskList.Web.csproj", "{82F5B654-6469-4DF5-BE8F-0F9D0616028E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskList.Persistence.Extensions", "TaskList.Persistence.Extensions\TaskList.Persistence.Extensions.csproj", "{AD68CF0B-FF03-48EA-B238-84720C3FC563}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,5 +62,9 @@ Global
 		{82F5B654-6469-4DF5-BE8F-0F9D0616028E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82F5B654-6469-4DF5-BE8F-0F9D0616028E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82F5B654-6469-4DF5-BE8F-0F9D0616028E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD68CF0B-FF03-48EA-B238-84720C3FC563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD68CF0B-FF03-48EA-B238-84720C3FC563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD68CF0B-FF03-48EA-B238-84720C3FC563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD68CF0B-FF03-48EA-B238-84720C3FC563}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

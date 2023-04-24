@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TaskList.Persistence.SqlServer\TaskList.Persistence.SqlServer.csproj" />
+    <ProjectReference Include="..\TaskList\TaskList.csproj" />
+  </ItemGroup>
+
 </Project>

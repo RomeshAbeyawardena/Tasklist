@@ -1,0 +1,18 @@
+{
+    "Assemblies": [
+        "TaskList",
+        "TaskList.Api",
+        "TaskList.Api.Core",
+        "TaskList.Api.Extensions",
+        "TaskList.Persistence",
+        "TaskList.Persistence.Core",
+        "TaskList.Persistence.Extensions",
+        "TaskList.Persistence.SqlServer",
+        "TaskList.Web"
+    ],
+    "ConnectionStringName": "test",
+    "DefaultFiles": [
+        "Index.html",
+        "Index.htm"
+    ]
+}

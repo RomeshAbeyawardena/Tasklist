@@ -10,7 +10,10 @@ public static class ServiceCollectionExtensions
     {
         var assesmbliesArray = assemblies.ToArray();
         return services.AddCoreServices()
-            .AddServicesWithRegisterAttribute(c => { }, assesmbliesArray)
+            .AddServicesWithRegisterAttribute(c => { 
+                c.ConfigureCoreServices = true;
+                c.ConfigureASPNetExtensions = true;
+            }, assesmbliesArray)
             .AddMediatR(c => c.RegisterServicesFromAssemblies(assesmbliesArray))
             .AddAutoMapper(assesmbliesArray);
     }

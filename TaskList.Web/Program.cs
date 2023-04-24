@@ -1,3 +1,4 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = new TaskList.Web.App("", args);
+using System.Reflection;
+
+var app = new TaskList.Web.App("config.json", args, Path.GetDirectoryName (Assembly.GetExecutingAssembly().Location));
 await app.RunAsync(CancellationToken.None);

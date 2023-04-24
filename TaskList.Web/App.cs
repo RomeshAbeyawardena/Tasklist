@@ -3,6 +3,7 @@ using System.Reflection;
 using TaskList.Persistence.Extensions;
 using TaskList.Api.Extensions;
 using System.Text.Json.Serialization;
+using RST.AspNetCore.Extensions.Contracts;
 
 namespace TaskList.Web;
 
@@ -14,7 +15,19 @@ public class App : AppBootstrapBase
 
     public override void Configure(WebApplication app, IEnumerable<Assembly> assemblies)
     {
-        throw new NotImplementedException();
+        app.MapControllers();
+        app.UseStaticFiles();
+        app.UseSwagger();
+        app.UseSwaggerUI(//o => o.InjectStylesheet(
+            //$"/{Stylesheets.DARK_SWAGGER_STYLESHEET}")
+        );
+
+        app.MapGet("/", async (context) =>
+        {
+            var defaultFilesHandler = context.RequestServices.GetRequiredService<IDefaultFilesHandler>();
+
+            await defaultFilesHandler.AddDefaultFilesHandler(context, Configuration);
+        });
     }
 
     public override void Configure(IServiceCollection services, IEnumerable<Assembly> assemblies)
@@ -36,6 +49,6 @@ public class App : AppBootstrapBase
 
     protected override void Dispose()
     {
-        throw new NotImplementedException();
+        
     }
 }

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RST.EntityFrameworkCore.Extensions" Version="1.0.1.19" />
+    <PackageReference Include="RST.Mediatr.Extensions" Version="1.0.1.19" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TaskList.Persistence\TaskList.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>

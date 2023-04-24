@@ -1,0 +1,15 @@
+{
+    "data": [
+        {
+            "id": "80a134dd-d5f7-47bb-b6c7-7be336b404e9",
+            "name": "Test Parent client",
+            "code": "AS29453"
+        },
+        {
+            "id": "f40f4b33-efc1-4c96-9bc3-4bc399026a9d",
+            "name": "Test client",
+            "code": "AS29453",
+            "parentClientId": "80a134dd-d5f7-47bb-b6c7-7be336b404e9"
+        }
+    ]
+}

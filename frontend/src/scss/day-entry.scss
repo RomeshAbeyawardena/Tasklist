@@ -1,0 +1,16 @@
+@import 'primeflex/primeflex.scss';
+
+div.day-entry {
+    @include styleclass('card');
+    
+    div.client-entry,
+    div.project-entry,
+    div.notes-entry {
+        @include styleclass('field');
+        div.p-autocomplete,
+        input,
+        textarea {
+            width:100%;
+        }
+    }
+}

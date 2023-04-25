@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RST.Contracts;
-using TaskList.Features.Client;
+using TaskList.Features.Project;
 
-namespace TaskList.Api.Features.Client;
+namespace TaskList.Api.Features.Project;
 
-[Route("api/client")]
+[Route("api/project")]
 public class Controller : RST.AspNetCore.Extensions.ApiController
 {
     public Controller(IServiceProvider serviceProvider) : base(serviceProvider)
@@ -12,25 +12,25 @@ public class Controller : RST.AspNetCore.Extensions.ApiController
     }
 
     [HttpGet]
-    public Task<IPagedResult<Models.Client>> GetClients([FromQuery]GetPagedQuery query, CancellationToken cancellationToken)
+    public Task<IPagedResult<Models.Project>> GetClients([FromQuery] GetPagedQuery query, CancellationToken cancellationToken)
     {
         return Mediator.Send(query, cancellationToken);
     }
 
     [HttpPost]
-    public Task<Models.Client> SaveClient([FromForm] PostRequest query, CancellationToken cancellationToken)
+    public Task<Models.Project> SaveClient([FromForm] PostRequest query, CancellationToken cancellationToken)
     {
         return Mediator.Send(query, cancellationToken);
     }
 
-    [HttpPut, Route("{clientId}")]
-    public Task<Models.Client> SaveClient([FromRoute]Guid clientId, [FromForm] PutRequest query, CancellationToken cancellationToken)
+    [HttpPut, Route("{projectId}")]
+    public Task<Models.Project> SaveClient([FromRoute] Guid projectId, [FromForm] PutRequest query, CancellationToken cancellationToken)
     {
-        query.Id = clientId;
+        query.Id = projectId;
         return Mediator.Send(query, cancellationToken);
     }
 
-    [HttpDelete, Route("{clientId}")]
+    [HttpDelete, Route("{projectId}")]
     public System.Threading.Tasks.Task DeleteClient([FromRoute] DeleteRequest request, CancellationToken cancellationToken)
     {
         return Mediator.Send(request, cancellationToken);

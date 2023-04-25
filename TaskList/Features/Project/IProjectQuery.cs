@@ -1,6 +1,8 @@
-﻿namespace TaskList.Features.Project;
+﻿using RST.Contracts;
 
-public interface IProjectQuery
+namespace TaskList.Features.Project;
+
+public interface IProjectQuery : IOrderByQuery
 {
     Guid? Id { get; set; }
     Guid? ClientId { get; set; }

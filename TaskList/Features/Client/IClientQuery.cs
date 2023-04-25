@@ -1,6 +1,8 @@
-﻿namespace TaskList.Features.Client;
+﻿using RST.Contracts;
 
-public interface IClientQuery
+namespace TaskList.Features.Client;
+
+public interface IClientQuery : IOrderByQuery
 {
     Guid? Id { get; set; }
     string? Name { get; set; }
